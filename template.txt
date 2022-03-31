@@ -1,0 +1,13 @@
+import UIkit
+import RealityKit
+
+class ViewController:UIViewController {
+
+@IBOutlet var arview: ARView!
+
+override func viewDidLoad() {
+super.viewDidLoad()
+let boxAnchor=try! Experience.loadBox()
+arview.scence.anchors.append(boxAnchor)
+}
+}
